@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Get waitlist stats",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Add user to waitlist",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "fid": 12345,
+        "username": "testuser",
+        "displayName": "Test User",
+        "verifiedAccount": true,
+        "verifiedChannel": true
+      },
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    }
+  ]
+}
